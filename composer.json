@@ -55,6 +55,11 @@
             "@php artisan config:clear --ansi",
             "@php artisan test"
         ],
+        "lint": "pint",
+        "lint:test": "pint --test",
+        "analyse": "phpstan analyse",
+        "refactor": "rector",
+        "refactor:test": "rector --dry-run",
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
             "@php artisan package:discover --ansi"
@@ -73,6 +78,7 @@
         "pre-package-uninstall": [
             "Illuminate\\Foundation\\ComposerScripts::prePackageUninstall"
         ]
+
     },
     "extra": {
         "laravel": {
